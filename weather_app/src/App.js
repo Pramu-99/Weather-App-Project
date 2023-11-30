@@ -12,8 +12,8 @@ const [forecast,setForecast]=useState(null);
   const handleOnSearchChange = (searchData) => {
     //console.log(searchData);
     const[la,lo]=searchData.value.split(" ");
-    const currentWeatherFetch=fetch(`${WEATHER_API_URL}/weather?lat=${la}&lon=${lo}&appid=${WEATHER_API_KEY}`);
-    const forecastFetch=fetch(`${WEATHER_API_URL}/forecast?lat=${la}&lon=${lo}&appid=${WEATHER_API_KEY}`)
+    const currentWeatherFetch=fetch(`${WEATHER_API_URL}/weather?lat=${la}&lon=${lo}&appid=${WEATHER_API_KEY}&units=metric`);
+    const forecastFetch=fetch(`${WEATHER_API_URL}/forecast?lat=${la}&lon=${lo}&appid=${WEATHER_API_KEY}&units=metric`)
    
     Promise.all([currentWeatherFetch,forecastFetch])
     .then(async (response)=>{
