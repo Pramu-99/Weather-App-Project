@@ -1,16 +1,16 @@
 import './CurrentWeather.css'
 
-const Current_Weather = () => {
+const Current_Weather = ({data}) => {
     return (
         <div className='weather'>
             <div className='top'>
                 <div>
-                    <p className='city'>Belgrade</p>
-                    <p className='weather_desc'>Sunny</p>
+                    <p className='city'>{data.city}</p>
+                    <p className='weather_desc'>{data.weather[0].description}</p>
                 </div>
             </div>
             <div className='bottom'>
-                <p className='temperature'>19 °C</p>
+                <p className='temperature'>{data.temperature}</p>
                 <div className='details'>
                     <div className='parameter-row'>
                         <span className='parameter-label'>Feels Like</span>
@@ -33,7 +33,7 @@ const Current_Weather = () => {
                     </div>
                 </div>
             </div>
-            <img alt='weather' className='weather_icon' src='icons/01d.png' />
+            <img alt='weather' className='weather_icon' src={`icons/${data.weather[0].icon}.png`}/>
         </div>
     )
 
