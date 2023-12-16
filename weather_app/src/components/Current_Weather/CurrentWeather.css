@@ -52,15 +52,15 @@
     width: 100px;
     padding-left: 20px;
     margin: 10px 15px 10px 0px;
-    
-   
+
+
 
 }
 
 .parameter-row {
     display: flex;
     justify-content: space-between;
-   
+
 
 }
 
@@ -68,7 +68,7 @@
     text-align: left;
     font-weight: 600;
     font-size: 12px;
-    
+
 }
 
 .parameter-value {
@@ -81,5 +81,5 @@
 
 .parameter-label.top {
     border-bottom: 1px solid white;
-    
+
 }
